@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050816;
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Prevent layout shift from scrollbar */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Selection */
+::selection {
+  background: #22d3ee;
+  color: #050816;
+}
+
+/* Smooth focus ring */
+*:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Hero AI constellation — keyframes for drifting nodes and flowing lines. */
+@keyframes nodedrift {
+  from { transform: translate(-50%, -50%) translate3d(0, 0, 0); }
+  to   { transform: translate(-50%, -50%) translate3d(4px, -6px, 0); }
+}
+
+@keyframes dataflow {
+  from { stroke-dashoffset: 20; }
+  to   { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nodedrift,
+  [style*="nodedrift"],
+  [style*="dataflow"] {
+    animation: none !important;
+  }
+}
