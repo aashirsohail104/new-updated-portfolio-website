@@ -8,6 +8,7 @@ import Skills from './components/sections/Skills'
 import Experience from './components/sections/Experience'
 import Projects from './components/sections/Projects'
 import Contact from './components/sections/Contact'
+import ChatAssistant from './components/ui/ChatAssistant'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <ChatAssistant />
     </div>
   )
 }
