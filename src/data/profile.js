@@ -2,7 +2,7 @@ export const profile = {
   name: 'Aashir Siddiqui',
   title: 'Agentic AI Engineer',
   roles: ['Full Stack Developer', 'Problem Solver'],
-  email: 'aashirsiddiqui@gmail.com',
+  email: 'aaashirsiddiqui@gmail.com',
   github: 'https://github.com/aashirsohail104',
   linkedin: 'https://www.linkedin.com/in/aashirsiddiqui',
   resumeUrl: `${import.meta.env.BASE_URL}Aashir Siddiqui Resume.pdf`,

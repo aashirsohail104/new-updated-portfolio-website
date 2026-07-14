@@ -45,14 +45,17 @@ export default function ChatAssistant() {
       ]
       const reply = await sendMessage(history)
       setMessages((prev) => [...prev, { role: 'assistant', content: reply }])
-    } catch {
+    } catch (err) {
+      console.error('Chat error:', err.message)
       setError(true)
       setMessages((prev) => [
         ...prev,
         {
           role: 'assistant',
           content:
-            "Sorry, I couldn't process that right now. Please try again or email Aashir directly at aashirsiddiqui@gmail.com.",
+            err.message.includes('quota') || err.message.includes('rate')
+              ? "I'm currently at my usage limit. Please try again in a few minutes, or email Aashir directly at aaashirsiddiqui@gmail.com."
+              : "Sorry, I couldn't process that right now. Please try again or email Aashir directly at aaashirsiddiqui@gmail.com.",
         },
       ])
     } finally {

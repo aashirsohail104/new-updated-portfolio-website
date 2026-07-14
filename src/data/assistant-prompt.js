@@ -13,7 +13,7 @@ export const SYSTEM_PROMPT = `You are the AI Portfolio Assistant for Aashir Sidd
 - Also: Full Stack Developer, Problem Solver
 - Based in: Pakistan
 - Availability: Open to work
-- Email: aashirsiddiqui@gmail.com
+- Email: aaashirsiddiqui@gmail.com
 - GitHub: https://github.com/aashirsohail104
 - LinkedIn: https://www.linkedin.com/in/aashirsiddiqui
 
