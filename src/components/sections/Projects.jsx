@@ -15,6 +15,9 @@ const fadeUp = {
   transition: { duration: 0.5, ease: 'easeOut' },
 }
 
+// Repos to always feature regardless of size/score.
+const FEATURED = new Set(['calorie-calculator', 'portfolio'])
+
 // Pull a wider window so the ranking has real signal to work with.
 const API = `https://api.github.com/users/${profile.githubUsername}/repos?sort=updated&per_page=30&type=owner`
 
@@ -79,16 +82,17 @@ export default function Projects() {
       })
       .then((data) => {
         if (cancelled) return
-        // Drop forks, archived, mirrors, and empty placeholder repos.
+        // Drop forks, archived, mirrors, and empty placeholder repos
+        // (unless the repo is explicitly featured).
         const eligible = data.filter(
           (r) =>
             !r.fork &&
             !r.archived &&
             !r.disabled &&
-            r.size > 0
+            (FEATURED.has(r.name) || r.size > 0)
         )
         const ranked = eligible
-          .map((r) => ({ repo: r, score: scoreRepo(r) }))
+          .map((r) => ({ repo: r, score: scoreRepo(r) + (FEATURED.has(r.name) ? 200 : 0) }))
           .sort((a, b) => b.score - a.score)
           .map((x) => x.repo)
         setRepos(ranked.slice(0, 6))
