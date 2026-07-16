@@ -13,8 +13,8 @@ import ChatAssistant from './components/ui/ChatAssistant'
 export default function App() {
   return (
     <div className="min-h-screen bg-bg text-slate-200">
-      <Loader />
-      <Navbar />
+     <Loader />
+     <Navbar />
       <main>
         <Hero />
         <About />

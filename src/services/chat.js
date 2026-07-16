@@ -7,10 +7,11 @@ export async function sendMessage(messages) {
     body: JSON.stringify({ messages }),
   })
 
+  const data = await res.json()
+
   if (!res.ok) {
-    throw new Error('Failed to get response')
+    throw new Error(data.error || 'Failed to get response')
   }
 
-  const data = await res.json()
   return data.reply
 }
