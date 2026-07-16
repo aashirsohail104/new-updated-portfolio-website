@@ -9,7 +9,7 @@ const colMap = {
 const gapMap = {
   sm: 'gap-4',
   md: 'gap-6',
-  lg: 'gap-8',
+  lg: 'gap-8 2xl:gap-10',
 }
 
 export default function Grid({

@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
+      screens: {
+        nav: '1400px',
+      },
       colors: {
         bg: '#050816',
         primary: '#22d3ee',

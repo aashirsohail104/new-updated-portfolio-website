@@ -157,7 +157,7 @@ export default function Projects() {
             {repos.map((repo) => (
               <Card key={repo.id} interactive className="flex flex-col">
                 <ProjectPlaceholder />
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="text-lg 2xl:text-xl font-semibold text-white">
                   {repo.name}
                 </h3>
                 <p className="mt-2 text-sm text-muted leading-relaxed line-clamp-3 min-h-[3.5rem]">

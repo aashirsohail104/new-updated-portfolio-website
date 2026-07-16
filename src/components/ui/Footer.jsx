@@ -14,7 +14,7 @@ const links = [
 export default function Footer() {
   return (
     <footer className="border-t border-line">
-      <Container className="py-12">
+      <Container className="py-12 2xl:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           <div>
             <div className="flex items-center gap-2">

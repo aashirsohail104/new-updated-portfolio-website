@@ -66,7 +66,7 @@ export default function About() {
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted transition-colors duration-300 group-hover:text-primary/80">
                   {item.label}
                 </p>
-                <p className="mt-2 text-lg text-white font-semibold transition-all duration-300">
+                <p className="mt-2 text-lg 2xl:text-xl text-white font-semibold transition-all duration-300">
                   {item.value}
                 </p>
               </Card>

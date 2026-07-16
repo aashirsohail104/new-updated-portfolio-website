@@ -34,8 +34,8 @@ export default function Services() {
                   .join('')
                   .slice(0, 2)}
               </span>
-              <h3 className="text-xl font-semibold text-white">{s.title}</h3>
-              <p className="text-muted text-sm md:text-base leading-relaxed">
+              <h3 className="text-xl 2xl:text-2xl font-semibold text-white">{s.title}</h3>
+              <p className="text-muted text-sm md:text-base 2xl:text-lg leading-relaxed">
                 {s.description}
               </p>
             </div>

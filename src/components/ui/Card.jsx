@@ -9,7 +9,7 @@ export default function Card({
   ...rest
 }) {
   const base =
-    'rounded-xl border border-line bg-bg/40 p-6 transition-colors duration-200'
+    'rounded-xl border border-line bg-bg/40 p-6 2xl:p-8 transition-colors duration-200'
   const hover = interactive ? 'hover:border-primary/50 hover:bg-bg/60' : ''
   const cls = `${base} ${hover} ${className}`
 

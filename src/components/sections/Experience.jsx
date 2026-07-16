@@ -48,10 +48,10 @@ export default function Experience() {
                   <Icon size={18} />
                 </span>
                 <div className="flex flex-col gap-1">
-                  <h3 className="text-lg font-semibold text-white">
+                  <h3 className="text-lg 2xl:text-xl font-semibold text-white">
                     {item.title}
                   </h3>
-                  <p className="text-muted text-sm md:text-base leading-relaxed">
+                  <p className="text-muted text-sm md:text-base 2xl:text-lg leading-relaxed">
                     {item.description}
                   </p>
                 </div>

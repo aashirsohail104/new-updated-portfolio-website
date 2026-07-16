@@ -17,13 +17,13 @@ const navLinks = [
 /*
   Navbar — simplest possible structure.
 
-  One Container, one flex row, three children at >= xl (1280px):
+  One Container, one flex row, three children at >= nav (1400px):
     [Logo]    [Nav (7 links)]    [Download CV]
   justify-between puts the three children at the left edge, center,
   and right edge — so the nav is geometrically centered by flexbox
   itself, no justify-center trick needed.
 
-  At < xl the nav and Download CV collapse into a hamburger drawer.
+  At < nav the nav and Download CV collapse into a hamburger drawer.
 */
 
 export default function Navbar() {
@@ -52,7 +52,7 @@ export default function Navbar() {
     <>
       <header className="fixed top-0 inset-x-0 z-50 bg-bg/80 backdrop-blur border-b border-line">
         <Container>
-          <div className="h-[60px] xl:h-16 flex items-center justify-between gap-4">
+          <div className="h-[60px] nav:h-16 flex items-center justify-between gap-4">
             {/* Logo — always visible, left edge */}
             <a
               href="#top"
@@ -61,16 +61,16 @@ export default function Navbar() {
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 border border-primary/30 text-primary font-bold text-sm">
                 AS
               </span>
-              <span className="hidden xl:inline whitespace-nowrap">
+              <span className="hidden nav:inline whitespace-nowrap">
                 {profile.name}
               </span>
             </a>
 
-            {/* Desktop nav (>= xl) — geometrically centered by justify-between */}
-            <nav
+            {/* Desktop nav (>= nav) — geometrically centered by justify-between */}
+          <nav
               aria-label="Primary"
-              className="hidden xl:flex items-center gap-1"
-            >
+              className="hidden nav:flex items-center gap-1"
+          >
               {navLinks.map((l) => (
                 <a
                   key={l.href}
@@ -82,37 +82,35 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* Download CV (>= xl) — right edge */}
+            {/* Download CV (>= nav) — right edge */}
             <a
               href={profile.resumeUrl}
               target="_blank"
               rel="noreferrer noopener"
-              className="hidden xl:inline-flex items-center gap-2 bg-primary text-bg px-4 py-2 text-sm font-medium rounded-md hover:bg-primary/90 transition-colors"
+              className="hidden nav:inline-flex items-center gap-2 bg-primary text-bg px-4 py-2 text-sm font-medium rounded-md hover:bg-primary/90 transition-colors"
             >
               <FaDownload size={13} />
               Download CV
             </a>
 
-            {/* Hamburger (< xl) */}
+            {/* Hamburger (< nav) */}
             <button
               type="button"
               onClick={() => setOpen((o) => !o)}
               aria-label={open ? 'Close menu' : 'Open menu'}
               aria-expanded={open}
               aria-controls="mobile-menu"
-              className="xl:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-line text-white"
-            >
-              {open ? <FaTimes size={16} /> : <FaBars size={16} />}
+              className="nav:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-line text-white">              {open ? <FaTimes size={16} /> : <FaBars size={16} />}
             </button>
           </div>
         </Container>
       </header>
 
-      {/* Mobile / tablet drawer (< xl) */}
+      {/* Mobile / tablet drawer (< nav) */}
       {open && (
         <div
           id="mobile-menu"
-          className="xl:hidden fixed inset-x-0 top-[60px] z-40 bg-bg/95 backdrop-blur border-b border-line"
+          className="nav:hidden fixed inset-x-0 top-[60px] z-40 bg-bg/95 backdrop-blur border-b border-line"
         >
           <Container className="py-6 flex flex-col gap-1">
             <nav aria-label="Mobile primary" className="flex flex-col">

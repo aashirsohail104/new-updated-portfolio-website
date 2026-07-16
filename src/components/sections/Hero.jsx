@@ -153,7 +153,7 @@ function HeroOrb() {
   return (
     <div
       aria-hidden
-      className="relative mx-auto w-full max-w-[360px] aspect-square overflow-hidden rounded-2xl border border-line/60 bg-bg/40"
+      className="relative mx-auto w-full max-w-[360px] 2xl:max-w-[420px] aspect-square overflow-hidden rounded-2xl border border-line/60 bg-bg/40"
     >
       {/* Layer 1 — digital grid (static, 1 div). */}
       <div
@@ -249,17 +249,17 @@ function HeroOrb() {
 export default function Hero() {
   return (
     <Section id="top" className="pt-32 md:pt-40">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 2xl:gap-20 items-center">
         <motion.div {...fadeUp} className="flex flex-col gap-6">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
             <RotatingText />
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-bold text-white leading-[1.1] tracking-tight">
             Building Intelligent AI Systems That{' '}
             <span className="text-primary">Think</span>,{' '}
             <span className="text-secondary">Automate</span>, and Scale.
           </h1>
-          <p className="text-base md:text-lg text-muted leading-relaxed max-w-xl">
+          <p className="text-base md:text-lg 2xl:text-xl text-muted leading-relaxed max-w-xl 2xl:max-w-2xl">
             I'm {profile.name}, an Agentic AI Engineer and Full Stack Developer
             focused on creating AI-powered applications, modern web experiences,
             and automation solutions. I enjoy solving complex problems through

@@ -55,10 +55,10 @@ export default function Contact() {
         />
       </motion.div>
 
-      <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10 2xl:gap-16">
         <motion.div
           {...fadeUp}
-          className="rounded-xl border border-line bg-bg/40 p-6 flex flex-col gap-5"
+          className="rounded-xl border border-line bg-bg/40 p-6 2xl:p-8 flex flex-col gap-5"
         >
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
@@ -125,7 +125,7 @@ export default function Contact() {
         <motion.form
           {...fadeUp}
           onSubmit={onSubmit}
-          className="rounded-xl border border-line bg-bg/40 p-6 flex flex-col gap-4"
+          className="rounded-xl border border-line bg-bg/40 p-6 2xl:p-8 flex flex-col gap-4"
         >
           <label className="flex flex-col gap-2">
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
